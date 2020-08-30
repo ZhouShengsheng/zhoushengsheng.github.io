@@ -182,11 +182,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 复制`.vimrc`配置文件：
 
-`.vimrc`下载链接：[.vimrc](resource/vimrc.txt)
-
-```bash
-mv vimrc.txt ~/.vimrc
-```
+`.vimrc`下载链接：[.vimrc](https://github.com/ZhouShengsheng/zhoushengsheng.github.io/blob/master/linux/env/resource/.vimrc)
 
 安装插件：
 ```bash
@@ -218,11 +214,7 @@ make install
 
 复制`~/.tmux.conf`：
 
-`.tmux.conf`下载链接：[tmux.conf.txt](resource/tmux.conf.txt)
-
-```bash
-mv tmux.conf.txt ~/.tmux.conf
-```
+`.tmux.conf`下载链接：[tmux.conf.txt](https://github.com/ZhouShengsheng/zhoushengsheng.github.io/blob/master/linux/env/resource/.tmux.conf)
 
 安装tmux插件管理器`tpm`:
 ```bash

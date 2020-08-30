@@ -8,7 +8,7 @@ BASE_DIR=${HOME}
 SRC_DIR=${BASE_DIR}/3rd/src
 LOCAL_DIR=${BASE_DIR}/local
 BASH_PROFILE=${HOME}/.bash_profile
-TMUX_BUNDLE_URL=https://raw.githubusercontent.com/ZhouShengsheng/zhoushengsheng.github.io/master/linux/env/auto_install_tmux/tmux_bundle.tar.gz.txt
+TMUX_BUNDLE_URL=https://raw.githubusercontent.com/ZhouShengsheng/zhoushengsheng.github.io/master/linux/env/auto_install_tmux/tmux_bundle.tar.gz
 
 # Get count of cpu
 declare -i cpus
@@ -38,9 +38,6 @@ cd ${SRC_DIR}
 
 echo "Download tmux bundle"
 wget ${TMUX_BUNDLE_URL}
-mv tmux_bundle.tar.gz.txt tmux_bundle.tar.gz
-
-echo "Unzip sources"
 tar -xf tmux_bundle.tar.gz
 cd tmux_bundle
 
