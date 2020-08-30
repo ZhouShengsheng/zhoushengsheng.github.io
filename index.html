@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shengsheng's Blog</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Shengsheng's Blog">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+    <link rel="icon" href="//zhoushengsheng.github.io/favicon.svg">
+    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+    window.$docsify = {
+        name: "Shengsheng's Blog",
+        maxAge: 100,
+        // repo: 'https://github.com/ZhouShengsheng',
+        auto2top: true,
+        search: {
+            maxAge: 100,
+            paths: 'auto',
+            placeholder: '🔍 Search',
+            noData: '😅 Not found',
+            depth: 10
+        },
+        // subMaxLevel: 2,
+        coverpage: false,
+        plugins: [
+            function (hook, vm) {
+                hook.beforeEach(function(content) {
+                    if (content == null)
+                        return null;
+                    const element = document.getElementById("gitalk-container");
+                    if (element == null) {
+                        return content;
+                    }
+                    // 隐藏首页的评论框
+                    if (content.startsWith("<h1>Shengsheng's Blog</h1>\n")) {
+                        element.style.display = "none"
+                    } else {
+                        element.style.display = "block"
+                    }
+                    return content
+                })
+            }
+        ]
+    }
+    </script>
+
+    <!-- Plugins -->
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+<!--    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>-->
+<!--    <script src="//unpkg.com/lib/plugins/zoom-image.min.js"></script>-->
+    <script src="//unpkg.com/docsify-copy-code"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+    <!-- Gitalk -->
+<!--    <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>-->
+<!--    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>-->
+<!--    <script src="//zhoushengsheng.github.io/_lib/js/md5.min.js"></script>-->
+<!--    <script>-->
+<!--        const gitalk = new Gitalk({-->
+<!--            clientID: 'dd9923b34fc5d6602967',-->
+<!--            clientSecret: '800c7ad8a2071ee0d8bd2e3d40aff9ce6c0f131f',-->
+<!--            repo: 'zhoushengsheng.github.io',-->
+<!--            owner: 'ZhouShengsheng',-->
+<!--            admin: ['ZhouShengsheng'],-->
+<!--            // Ensure uniqueness and length less than 50-->
+<!--            id: md5(window.location.pathname),-->
+<!--            // facebook-like distraction free mode-->
+<!--            distractionFreeMode: false-->
+<!--        })-->
+<!--    </script>-->
+
+    <script src="//zhoushengsheng.github.io/_lib/js/prism-java.min.js"></script>
+    <script src="//zhoushengsheng.github.io/_lib/js/prism-c.min.js"></script>
+    <script src="//zhoushengsheng.github.io/_lib/js/prism-bash.min.js"></script>
+    <script src="//zhoushengsheng.github.io/_lib/js/prism-sql.min.js"></script>
+</body>
+
+</html>
