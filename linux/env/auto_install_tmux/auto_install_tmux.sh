@@ -3,6 +3,8 @@
 # Author: Zhou Shengsheng
 # Date: 30/08/2020
 
+set -e
+
 # Configs
 BASE_DIR=${HOME}
 LOCAL_DIR=${BASE_DIR}/local
@@ -79,8 +81,8 @@ cp -r tpm ${BASE_DIR}/.tmux/plugins
 chmod +x ${BASE_DIR}/.tmux/plugins/tpm/scripts/install_plugins.sh
 ${BASE_DIR}/.tmux/plugins/tpm/scripts/install_plugins.sh >> ${TMUX_INSTALL_LOG}
 
-logInfo "Clean up"
+logInfo "Done! Please source ${BASH_PROFILE} manually by running following command:\nsource ${BASH_PROFILE}"
+
+# Clean up
 cd ${BASE_DIR}
 rm -rf tmux_bundle* ${TMUX_INSTALL_LOG}
-
-logInfo "Done! Please source ${BASH_PROFILE} manually by running following command:\nsource ${BASH_PROFILE}"
