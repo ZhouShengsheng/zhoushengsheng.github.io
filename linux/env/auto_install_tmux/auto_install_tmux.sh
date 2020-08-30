@@ -46,7 +46,6 @@ export LD_LIBRARY_PATH=${LOCAL_DIR}/lib:\${LD_LIBRARY_PATH}
 EOT
 
 export CPATH=${LOCAL_DIR}/include:${CPATH}
-export CFLAGS="-I${LOCAL_DIR}/include ${CFLAGS}"
 export LIBRARY_PATH=${LOCAL_DIR}/lib:${LIBRARY_PATH}
 export PATH=${LOCAL_DIR}/bin:${PATH}
 export LD_LIBRARY_PATH=${LOCAL_DIR}/lib:${LD_LIBRARY_PATH}
